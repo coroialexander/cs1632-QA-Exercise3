@@ -20,7 +20,7 @@ public class RentACat {
 
         boolean hasBeenRented = false;
 
-        if (c._rented = false) {
+        if (c._rented == false) {
 
             hasBeenRented = false;
         } else {
@@ -50,7 +50,7 @@ public class RentACat {
 
         boolean hasBeenRented = false;
 
-        if (c._rented = false) {
+        if (c._rented == false) {
 
             hasBeenRented = true;
             int index = _cats.indexOf(c);
@@ -81,7 +81,7 @@ public class RentACat {
 
     public String listCats(ArrayList<Cat> catList) {
 
-        for (Cat c: _cats) {
+        for (Cat c: catList) {
 
             if (catAvailable(1, catList) == true) {
 
@@ -245,7 +245,7 @@ public class RentACat {
                 }
             } catch (Exception nfex) {
                 System.err.println("Invalid cat ID.");
-                sc.next();
+                sc.nextLine();
             }
             }
 
@@ -270,5 +270,7 @@ public class RentACat {
     System.out.println("Closing up shop for the day!");
 
     }
+
+    
 
 }
