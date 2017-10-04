@@ -17,8 +17,20 @@ public class RentACat {
      */
     
     public boolean returnCat(Cat c) {
+    
+        boolean hasBeenRented = false;
+        
+        if (_cats.contains(c)) {
+        
+            hasBeenRented = false;
+        } else {
+        
+            hasBeenRented = true;
+            _cats.add(c);
+        }
+        
 	// TODO
-	return false;
+        return hasBeenRented;
     }
 
     /**
@@ -34,8 +46,19 @@ public class RentACat {
 
     
     public boolean rentCat(Cat c) {
-	// TODO
-	return false;
+	
+        boolean hasBeenRented = false;
+        
+        if (_cats.contains(c)) {
+    
+            hasBeenRented = false;
+            _cats.remove(c);
+        } else {
+        
+            hasBeenRented = true;
+        }
+        
+        return hasBeenRented;
     }
 
 
