@@ -268,10 +268,7 @@ public class RentACat {
     }
 
     System.out.println("Closing up shop for the day!");
-          
-    }
-
-    System.out.println("Closing up shop for the day!");
 
     }
+
 }
