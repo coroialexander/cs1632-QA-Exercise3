@@ -109,8 +109,16 @@ public class RentACat {
         
             return false;
         }
+        
+        for (Cat c : catList) {
+        
+            if (c.getId() == id) {
+            
+                return true;
+            }
+        }
 	// TODO
-	return false;
+        return false;
     }
 
     /**
