@@ -26,8 +26,7 @@ public class RentACat {
         } else {
 
             hasBeenRented = true;
-            int index = _cats.indexOf(c);
-            _cats.get(index)._rented = true;
+            c.returnCat();
         }
 
     // TODO
@@ -53,9 +52,7 @@ public class RentACat {
         if (c._rented == false) {
 
             hasBeenRented = true;
-            int index = _cats.indexOf(c);
-            c._rented = true;
-            _cats.get(index)._rented = true;
+            c.rentCat();
 
         } else {
 
@@ -81,9 +78,13 @@ public class RentACat {
 
     public String listCats(ArrayList<Cat> catList) {
 
+        int id = 0;
+
         for (Cat c: catList) {
 
-            if (catAvailable(1, catList) == true) {
+            ++id;
+
+            if (catAvailable(id, catList) == true) {
 
                 System.out.println(c.toString());
             }
@@ -103,6 +104,11 @@ public class RentACat {
      */
 
     public boolean catExists(int id, ArrayList<Cat> catList) {
+
+        if (catList == null || catList.size() == 0) {
+
+            return false;
+        }
     // TODO
     return false;
     }
@@ -271,6 +277,6 @@ public class RentACat {
 
     }
 
-    
+
 
 }
