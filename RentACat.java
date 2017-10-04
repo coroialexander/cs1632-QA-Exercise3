@@ -26,9 +26,7 @@ public class RentACat {
         } else {
         
             hasBeenRented = true;
-            int index = _cats.indexOf(c);
-            c._rented = true;
-            _cats.get(index)._rented = true;
+            c.returnCat();
         }
         
 	// TODO
@@ -54,9 +52,7 @@ public class RentACat {
         if (c._rented == false) {
             
             hasBeenRented = true;
-            int index = _cats.indexOf(c);
-            c._rented = true;
-            _cats.get(index)._rented = true;
+            c.rentCat();
             
         } else {
         
