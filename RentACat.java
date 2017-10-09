@@ -20,16 +20,13 @@ public class RentACat {
 
         boolean hasBeenRented = false;
 
-        if (c._rented == false) {
-
+        if (c.getRented() == false) {
             hasBeenRented = false;
         } else {
-
             hasBeenRented = true;
             c.returnCat();
         }
 
-    // TODO
         return hasBeenRented;
     }
 
@@ -49,13 +46,10 @@ public class RentACat {
 
         boolean hasBeenRented = false;
 
-        if (c._rented == false) {
-
+        if (c.getRented() == false) {
             hasBeenRented = true;
             c.rentCat();
-
         } else {
-
             hasBeenRented = false;
         }
 
@@ -77,20 +71,14 @@ public class RentACat {
      */
 
     public String listCats(ArrayList<Cat> catList) {
-
         int id = 0;
-
         for (Cat c: catList) {
-
             ++id;
-
             if (catAvailable(id, catList) == true) {
-
                 System.out.println(c.toString());
             }
-
         }
-    return "\n";
+        return "\n";
     }
 
     /**
@@ -104,20 +92,15 @@ public class RentACat {
      */
 
     public boolean catExists(int id, ArrayList<Cat> catList) {
-
         if (catList == null || catList.size() == 0) {
-
             return false;
         }
 
         for (Cat c : catList) {
-
             if (c.getId() == id) {
-
                 return true;
             }
         }
-    // TODO
         return false;
     }
 
